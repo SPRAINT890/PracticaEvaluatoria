@@ -6,10 +6,9 @@ class Pedido{
     private $idvendedor;
     private $montoTotal;
 
-    //metodos
     public function insertPedido(){
-        $sql = 'INSERT INTO pedido (cliente, fecha, id_vendedor, monto_total) VALUES (?,?,?,?)';
         $con = new Conexion;
+        $sql = 'INSERT INTO pedido (cliente, fecha, id_vendedor, monto_total) VALUES (?,?,?,?)';
         $query = $con->prepare($sql);
         $query->execute([
             $this->getCliente(), $this->getFecha(), $this->getIdvendedor(), $this->getMontoTotal()
@@ -18,21 +17,30 @@ class Pedido{
         return $con->lastInsertId();
     }
 
-    public function calcularMonto(){
-        $detPedido = new DetallePedido;
-        if ($this->idpedido!=null) {
-            $sql = 'SELECT cantidad, precio_unitario FROM detalle_pedido WHERE id_pedido=?';
-            $con = new Conexion;
-            $query = $con->prepare($sql);
-            $query->execute([
-                $this->idpedido
-            ]);
+    public function listarPedido($cliente){
+        $con = new Conexion;
+        $sql = 'SELECT cliente, fecha, monto_total, id_vendedor FROM pedido WHERE cliente = "' . $cliente . '";';
+        $consulta = $con->query($sql);
+        if ($consulta->fetchColumn() > 0) {
+            foreach ($consulta as $row) {
+                $data['cliente'] = $row['cliente'];
+    
+            }
+            return $data;
         }else{
-            $subtotal=$detPedido->getSubTotal();
-            $this->setMontoTotal($subtotal);
+            return "no hay data";
         }
-
     }
+
+    public function calcularMonto($productoUno){
+
+        $subtotalUno = $productoUno->getSubTotal();
+        //$subtotalDos = $productoDos->getSubTotal();
+        $montoTotal  = $subtotalUno;
+        $this->setMontoTotal($montoTotal);
+        return $montoTotal;
+    }
+
     public function cantidadVentas($idvendedor){
 
     }
