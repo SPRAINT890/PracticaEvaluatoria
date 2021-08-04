@@ -6,9 +6,9 @@
 <form action="guardarPedido.php" method="get">
 
     <div class="container p-3">
-        <div class="row  w-100 my-md-3 align-items-start">
-            <div class="col-6 bg-dark d-inline pt-3 px-3 pt-md-5 text-center text-white overflow-hidden">
-                <div class="align-content-middle" >
+        <div class="row w-100 my-md-3 align-items-start">
+            <div class="col bg-dark d-inline pt-3 px-3 pt-md-5 text-center text-white overflow-hidden">
+                <div class="align-content-middle">
                     <div class="my-1 py-3 text-start">
                         <h2 class="display-5" name="Producto1">Camisetas</h2>
                         <!-- <p class="lead">Tus camisetas preferidas</p> -->
@@ -20,8 +20,15 @@
                         <input type="hidden" name="PrecioUUno" value="150">
                     </div>
                 </div>
-                <label for="cantidad1">Cantidad</label>
-                <input type="number" name="cantidad1" placeholder="4" class="form-control widthImp">
+
+                <form class="row">
+                    <div class="col-auto">
+                        <label for="cantidad1">Cantidad</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="number" name="cantidad1" placeholder="4" class="form-control widthImp">
+                    </div>
+                </form>
 
 
 
@@ -30,7 +37,7 @@
                     style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
             </div>
 
-            <div class="col-6 bg-light d-inline me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="col bg-light d-inline me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
                 <div class="my-3 py-3">
                     <h2 class="display-5" name="Producto2">Vestidos</h2>
                     <p class="lead">Tus camisetas preferidas</p>
@@ -47,14 +54,15 @@
 
                 <button type="submit" class="btn btn-secondary">Carrito</button>
                 <div class="bg-dark shadow-sm mx-auto p-2 div__img">
-                <img src="../view/img/headsetDos.jpg" class="img-fluid img">
-                </div> 
+                    <img src="../view/img/headsetDos.jpg" class="img-fluid img">
+                </div>
                 <!-- <img src="../view/img/headsetDos.jpg" class="img-thumbnail">-->
             </div>
         </div>
 
+
         <div class="w-100 my-md-3 row align-items-center">
-            <div class="col-6 bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+            <div class="col bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
                 <div class="my-3 p-3">
                     <h2 class="display-5" name="Producto3">Shorts Mujer</h2>
                     <p class="lead">Los mejores shorts</p>
@@ -75,7 +83,7 @@
                     style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
                 </div>
             </div>
-            <div class="col-6 bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 w-50 text-center overflow-hidden">
+            <div class="col bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 w-50 text-center overflow-hidden">
                 <div class="my-3 p-3" style="color:black">
                     <h2 class="display-5" name="Producto4">Shorts Hombre</h2>
                     <p class="lead">Los mejores shorts</p>
@@ -99,7 +107,7 @@
 
         <div class="w-100 my-md-3 row align-items-end">
             <div
-                class="col-6 bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 d-inline-block text-center text-white overflow-hidden">
+                class="col bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 d-inline-block text-center text-white overflow-hidden">
                 <div class="my-3 p-3">
                     <h2 class="display-5" name="Producto5">Sandalias</h2>
                     <p class="lead">Los mejores shorts</p>
@@ -121,7 +129,7 @@
                 </div>
             </div>
 
-            <div class="col-6 bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 w-50 text-center overflow-hidden">
+            <div class="col bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 w-50 text-center overflow-hidden">
                 <div class="my-3 p-3" style="color:black">
                     <h2 class="display-5" name="Producto6">Zapatos</h2>
                     <p class="lead">Los mejores shorts</p>
