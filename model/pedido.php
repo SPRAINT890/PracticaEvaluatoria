@@ -18,21 +18,15 @@ class Pedido{
         return $con->lastInsertId();
     }
 
-    public function calcularMonto(){
-        $detPedido = new DetallePedido;
-        if ($this->idpedido!=null) {
-            $sql = 'SELECT cantidad, precio_unitario FROM detalle_pedido WHERE id_pedido=?';
-            $con = new Conexion;
-            $query = $con->prepare($sql);
-            $query->execute([
-                $this->idpedido
-            ]);
-        }else{
-            $subtotal=$detPedido->getSubTotal();
-            $this->setMontoTotal($subtotal);
-        }
+    public function calcularMonto($productoUno){
 
+        $subtotalUno = $productoUno->getSubTotal();
+        //$subtotalDos = $productoDos->getSubTotal();
+        $montoTotal  = $subtotalUno;
+        $this->setMontoTotal($montoTotal);
+        return $montoTotal;
     }
+
     public function cantidadVentas($idvendedor){
 
     }

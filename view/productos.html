@@ -9,15 +9,17 @@
         <div class="col d-md-flex flex-md-equal w-50 my-md-3 ps-md-3">
             <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
                 <div class="my-3 py-3">
-                    <h2 class="display-5" name="Producto">Camisetas</h2>
+                    <h2 class="display-5" name="producto">Camisetas</h2>
                     <p class="lead">Tus camisetas preferidas</p>
                 </div>
 
                 <label for="cantidad">Cantidad</label>
-                <input type="number" name="cantidad" placeholder="2" class="form-control">
+                <input type="number" name="cantidadUno" value="0" class="form-control">
 
                 <div class="conteiner">
                     <label name="precioU">$150</label>
+                    <input type="hidden" value="150" name="precioUUno">
+                    <input type="hidden" value="Camisetas" name="productoUno">
                 </div>
 
                 <button type="submit" class="btn btn-secondary">Carrito</button>

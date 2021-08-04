@@ -7,14 +7,13 @@ class DetallePedido{
     private $precioUnitario;
 
     public function insertDetallePedido(){
-        $sql = 'INSERT INTO detalle_pedido (id_pedido, producto, cantidad, precio_unitario) VALUES (?,?,?,?,?)';
+        $sql = 'INSERT INTO detalle_pedido (id_pedido, producto, cantidad, precio_unitario) VALUES (?,?,?,?)';
         $con = new Conexion;
         $query = $con->prepare($sql);
+
         $query->execute([
-            $this->getIdpedido(), $this->getProducto(), $this->getCantidad(), $this->getPrecioUnitario()
+            $this->getIdpedido(), $this->getProducto(), $this->getCantidad(), $this->getPrecioUnitario() 
         ]);
-        
-        return $con->lastInsertId();
     }
     public function getSubTotal(){
         $cantidad = $this->getCantidad();
