@@ -5,60 +5,65 @@
 
 <form action="guardarPedido.php" method="get">
 
-    <div class="container w-100">
-        <div class="w-100 my-md-3 row align-items-start">
-            <div class="col bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-                <div class="my-3 py-3">
-                    <h2 class="display-5" name="Producto1">Camisetas</h2>
-                    <p class="lead">Tus camisetas preferidas</p>
-                </div>
+    <div class="container p-3">
+        <div class="row  w-100 my-md-3 align-items-start">
+            <div class="col-6 bg-dark d-inline pt-3 px-3 pt-md-5 text-center text-white overflow-hidden">
+                <div class="align-content-middle" >
+                    <div class="my-1 py-3 text-start">
+                        <h2 class="display-5" name="Producto1">Camisetas</h2>
+                        <!-- <p class="lead">Tus camisetas preferidas</p> -->
+                    </div>
 
+                    <div class="bg-secondary rounded shadow-sm my-2 w-25">
+                        <label name="precioU1">$150</label>
+                        <input type="hidden" name="ProductoUno" value="Camisetas">
+                        <input type="hidden" name="PrecioUUno" value="150">
+                    </div>
+                </div>
                 <label for="cantidad1">Cantidad</label>
-                <input type="number" name="cantidad1" placeholder="4" class="form-control">
+                <input type="number" name="cantidad1" placeholder="4" class="form-control widthImp">
 
-                <div class="conteiner bg-light rounded shadow-sm">
-                    <label name="precioU1">$150</label>
-                    <input type="hidden" name="ProductoUno" value="Camisetas">
-                    <input type="hidden" name="PrecioUUno" value="150">
-                </div>
+
 
                 <button type="submit" class="btn btn-secondary">Carrito</button>
                 <div class="bg-light shadow-sm mx-auto"
                     style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
             </div>
 
-            <div class="col bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 w-50 text-center overflow-hidden">
+            <div class="col-6 bg-light d-inline me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
                 <div class="my-3 py-3">
                     <h2 class="display-5" name="Producto2">Vestidos</h2>
                     <p class="lead">Tus camisetas preferidas</p>
                 </div>
 
                 <label for="cantidad2">Cantidad</label>
-                <input type="number" name="cantidad2" placeholder="4" class="form-control">
+                <input type="number" name="cantidad2" placeholder="4" class="form-control widthImp">
 
-                <div class="conteiner bg-light rounded shadow-sm">
+                <div class="conteiner bg-light rounded shadow-sm my-2">
                     <label name="precioU2">$300</label>
                     <input type="hidden" name="ProductoDos" value="Vestidos">
                     <input type="hidden" name="precioUDos" value="300">
                 </div>
 
                 <button type="submit" class="btn btn-secondary">Carrito</button>
-                <div class="bg-light shadow-sm mx-auto"
-                    style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+                <div class="bg-dark shadow-sm mx-auto p-2 div__img">
+                <img src="../view/img/headsetDos.jpg" class="img-fluid img">
+                </div> 
+                <!-- <img src="../view/img/headsetDos.jpg" class="img-thumbnail">-->
             </div>
         </div>
 
-        <div class="w-100 my-md-3 row align-items-start">
-            <div class="col bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="w-100 my-md-3 row align-items-center">
+            <div class="col-6 bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
                 <div class="my-3 p-3">
                     <h2 class="display-5" name="Producto3">Shorts Mujer</h2>
                     <p class="lead">Los mejores shorts</p>
                 </div>
 
                 <label for="cantidad3">Cantidad</label>
-                <input type="number" name="cantidad3" placeholder="2" class="form-control">
+                <input type="number" name="cantidad3" placeholder="2" class="form-control widthImp">
 
-                <div class="conteiner bg-light rounded shadow-sm">
+                <div class="conteiner bg-light rounded shadow-sm my-2">
                     <label name="precioU3">$220</label>
                     <input type="hidden" name="ProductoTres" value="Shorts Mujer">
                     <input type="hidden" name="precioUTres" value="220">
@@ -66,73 +71,77 @@
 
                 <button type="submit" class="btn btn-secondary">Carrito</button>
 
-                <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                <div class="bg-light shadow-sm mx-auto"
+                    style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                </div>
+            </div>
+            <div class="col-6 bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 w-50 text-center overflow-hidden">
+                <div class="my-3 p-3" style="color:black">
+                    <h2 class="display-5" name="Producto4">Shorts Hombre</h2>
+                    <p class="lead">Los mejores shorts</p>
                 </div>
 
-                <div class="col bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 w-50 text-center overflow-hidden">
-                    <div class="my-3 p-3">
-                        <h2 class="display-5" name="Producto4">Shorts Hombre</h2>
-                        <p class="lead">Los mejores shorts</p>
-                    </div>
+                <label for="cantidad4">Cantidad</label>
+                <input type="number" name="cantidad4" placeholder="2" class="form-control widthImp">
 
-                    <label for="cantidad4">Cantidad</label>
-                    <input type="number" name="cantidad4" placeholder="2" class="form-control">
-
-                    <div class="conteiner bg-light rounded shadow-sm">
-                        <label name="precioU4">$180</label>
-                        <input type="hidden" name="ProductoCuatro" value="Shorts Hombre">
+                <div class="conteiner bg-light rounded shadow-sm my-2">
+                    <label name="precioU4">$180</label>
+                    <input type="hidden" name="ProductoCuatro" value="Shorts Hombre">
                     <input type="hidden" name="precioUCuatro" value="180">
-                    </div>
+                </div>
 
-                    <button type="submit" class="btn btn-secondary">Carrito</button>
+                <button type="submit" class="btn btn-secondary">Carrito</button>
 
-                    <div class="bg-dark shadow-sm mx-auto"
-                        style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-                    </div>
+                <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 my-md-3 row align-items-end">
+            <div
+                class="col-6 bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 d-inline-block text-center text-white overflow-hidden">
+                <div class="my-3 p-3">
+                    <h2 class="display-5" name="Producto5">Sandalias</h2>
+                    <p class="lead">Los mejores shorts</p>
+                </div>
+
+                <label for="cantidad5">Cantidad</label>
+                <input type="number" name="cantidad5" placeholder="2" class="form-control widthImp">
+
+                <div class="conteiner bg-light rounded shadow-sm my-2">
+                    <label name="precioU5">$220</label>
+                    <input type="hidden" name="ProductoCinco" value="Sandalias">
+                    <input type="hidden" name="precioUCinco" value="220">
+                </div>
+
+                <button type="submit" class="btn btn-secondary">Carrito</button>
+
+                <div class="bg-light shadow-sm mx-auto"
+                    style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
                 </div>
             </div>
 
-            <div class="w-100 my-md-3 row align-items-start">
-                <div class="col bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-                    <div class="my-3 p-3">
-                        <h2 class="display-5" name="Producto5">Sandalias</h2>
-                        <p class="lead">Los mejores shorts</p>
-                    </div>
-    
-                    <label for="cantidad5">Cantidad</label>
-                    <input type="number" name="cantidad5" placeholder="2" class="form-control">
-    
-                    <div class="conteiner bg-light rounded shadow-sm">
-                        <label name="precioU5">$220</label>
-                        <input type="hidden" name="ProductoCinco" value="Sandalias">
-                    <input type="hidden" name="precioUCinco" value="220">
-                    </div>
-    
-                    <button type="submit" class="btn btn-secondary">Carrito</button>
-    
-                    <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-                    </div>
-    
-                    <div class="col bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 w-50 text-center overflow-hidden">
-                        <div class="my-3 p-3">
-                            <h2 class="display-5" name="Producto6">Zapatos</h2>
-                            <p class="lead">Los mejores shorts</p>
-                        </div>
-    
-                        <label for="cantidad6">Cantidad</label>
-                        <input type="number" name="cantidad6" placeholder="2" class="form-control">
-    
-                        <div class="conteiner bg-light rounded shadow-sm">
-                            <label name="precioU6">$280</label>
-                            <input type="hidden" name="ProductoSeis" value="Zapatos">
-                    <input type="hidden" name="precioUSeis" value="280">
-                        </div>
-    
-                        <button type="submit" class="btn btn-secondary">Carrito</button>
-    
-                        <div class="bg-dark shadow-sm mx-auto"
-                            style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-                        </div>
-                    </div>
+            <div class="col-6 bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 w-50 text-center overflow-hidden">
+                <div class="my-3 p-3" style="color:black">
+                    <h2 class="display-5" name="Producto6">Zapatos</h2>
+                    <p class="lead">Los mejores shorts</p>
                 </div>
+
+                <label for="cantidad6">Cantidad</label>
+                <input type="number" name="cantidad6" placeholder="2" class="form-control widthImp">
+
+                <div class="conteiner bg-light rounded shadow-sm my-2">
+                    <label name="precioU6">$280</label>
+                    <input type="hidden" name="ProductoSeis" value="Zapatos">
+                    <input type="hidden" name="precioUSeis" value="280">
+                </div>
+
+                <button type="submit" class="btn btn-secondary">Carrito</button>
+
+                <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                </div>
+            </div>
+        </div>
+    </div>
+
 </form>
