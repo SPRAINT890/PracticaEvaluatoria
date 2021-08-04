@@ -1,5 +1,5 @@
 <?php
-class DetallePedido extends Conexion{
+class DetallePedido{
     private $id;
     private $idpedido;
     private $producto;
@@ -7,11 +7,11 @@ class DetallePedido extends Conexion{
     private $precioUnitario;
 
     public function insertDetallePedidio(){
-        $sql = 'INSERT INTO detalle_pedido (id, id_pedido, producto, cantidad, precio_unitario) VALUES (?,?,?,?,?)';
+        $sql = 'INSERT INTO detalle_pedido (id_pedido, producto, cantidad, precio_unitario) VALUES (?,?,?,?,?)';
         $con = new Conexion;
         $query = $con->prepare($sql);
         $query->execute([
-            
+            $this->getIdpedido(), $this->getProducto(), $this->getCantidad(), $this->getPrecioUnitario()
         ]);
         
         return $con->lastInsertId();

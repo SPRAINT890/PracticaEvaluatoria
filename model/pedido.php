@@ -1,5 +1,4 @@
 <?php
-include_once('conexion.php');
 class Pedido{
     private $idpedido;
     private $cliente;
