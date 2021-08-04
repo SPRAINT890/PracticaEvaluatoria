@@ -7,7 +7,7 @@ class Pedido{
     private $montoTotal;
 
     //metodos
-    public function insertPedidio(){
+    public function insertPedido(){
         $sql = 'INSERT INTO pedido (cliente, fecha, id_vendedor, monto_total) VALUES (?,?,?,?)';
         $con = new Conexion;
         $query = $con->prepare($sql);
@@ -19,6 +19,18 @@ class Pedido{
     }
 
     public function calcularMonto(){
+        $detPedido = new DetallePedido;
+        if ($this->idpedido!=null) {
+            $sql = 'SELECT cantidad, precio_unitario FROM detalle_pedido WHERE id_pedido=?';
+            $con = new Conexion;
+            $query = $con->prepare($sql);
+            $query->execute([
+                $this->idpedido
+            ]);
+        }else{
+            $subtotal=$detPedido->getSubTotal();
+            $this->setMontoTotal($subtotal);
+        }
 
     }
     public function cantidadVentas($idvendedor){
