@@ -8,15 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="guardarPedido.php">
-        <label for="cantidad">cantidad</label>
-        <input type="number" name="cantidad">
-
-        <label for="pUnitario">pUnitario</label>
-        <input type="number" name="pUnitario">
-        
-        <button type="submit">Calcular</button>
-    </form>
+    <?php
+    include('../view/productos.html');
+    ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

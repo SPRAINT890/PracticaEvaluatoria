@@ -1,76 +1,57 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<header class="site-header sticky-top py-1">
+    <p class="py-2 d-none d-md-inline-block">Selleccione sus productos
+    <p>
+</header>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Selecciona tus Productos</title>
-</head>
-<body>
-    <header class="site-header sticky-top py-1">
-          <p class="py-2 d-none d-md-inline-block">Selleccione sus productos<p>
-      </header>
-      
-      <form action="guardarPedido.php" method="get">
-          
-             <div class="row w-100">
-                <div class="col-6 w-50 my-md-3 ps-md-3">
-                    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-                      <div class="my-3 py-3">
-                        <h2 class="display-5" name="Producto">Camisetas</h2>
-                        <p class="lead">Tus camisetas preferidas</p>
-                      </div>
-          
-                      <label for="cantidad">Cantidad</label>
-                      <input type="number" name="cantidad" placeholder="2" class="form-control"> 
-          
-                      <div class="conteiner">
-                          <label name="precioU">$150</label>
-                      </div>
-          
-                    <!-- <div class="bg-light shadow-sm mx-auto" 
-                    style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
+<form action="guardarPedido.php" method="get">
+
+    <div class="row w-100">
+        <div class="col d-md-flex flex-md-equal w-50 my-md-3 ps-md-3">
+            <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                <div class="my-3 py-3">
+                    <h2 class="display-5" name="Producto">Camisetas</h2>
+                    <p class="lead">Tus camisetas preferidas</p>
                 </div>
 
-                    <div class="col-6 bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 w-50 text-center overflow-hidden">
-                        <div class="my-3 p-3">
-                          <h2 class="display-5">Shorts</h2>
-                          <p class="lead">Los mejores shorts</p>
-                        </div>
-                        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-                    </div>
-             </div>
-              
-            
-                         
+                <label for="cantidad">Cantidad</label>
+                <input type="number" name="cantidad" placeholder="2" class="form-control">
 
-          
-      
-        <div class="d-md-flex flex-md-equal w-50 my-md-3 ps-md-3">
-          <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
-              <h2 class="display-5">Vestidos</h2>
-              <p class="lead">And an even wittier subheading.</p>
-            </div>
-            <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-          </div>
+                <div class="conteiner">
+                    <label name="precioU">$150</label>
+                </div>
 
-          <div class="bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <div class="my-3 py-3">
-              <h2 class="display-5">Calzado</h2>
-              <p class="lead">And an even wittier subheading.</p>
+                <div class="bg-light shadow-sm mx-auto"
+                    style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
             </div>
-            <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-          </div>
+
+            <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 w-50 text-center overflow-hidden">
+                <div class="my-3 p-3">
+                    <h2 class="display-5">Shorts</h2>
+                    <p class="lead">Los mejores shorts</p>
+                </div>
+                <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                </div>
+            </div>
         </div>
-      
-        
-    </form>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
-</html>
+    <div class="d-md-flex flex-md-equal w-50 my-md-3 ps-md-3">
+        <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3">
+                <h2 class="display-5">Vestidos</h2>
+                <p class="lead">And an even wittier subheading.</p>
+            </div>
+            <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            </div>
+        </div>
+
+        <div class="bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+            <div class="my-3 py-3">
+                <h2 class="display-5">Calzado</h2>
+                <p class="lead">And an even wittier subheading.</p>
+            </div>
+            <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            </div>
+        </div>
+    </div>
+</form>
