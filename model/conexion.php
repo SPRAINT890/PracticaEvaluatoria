@@ -1,11 +1,22 @@
 <?php
-$usuario = 'root';
-$contraseña = '';
-$database = 'ejercicio_web';
-$host = 'localhost';
-try {
-    $cn = new PDO("mysql:host=$host;dbname=$database", $usuario, $contraseña);
-} catch (PDOException $e) {
-    print "¡Error!: " . $e->getMessage() . "<br/>";
-    die();
+class Conexion extends PDO{
+ private const USER = "root";
+ private const PASS = "fdeQt7fkJkQEvrycdIQs";
+ private const DB = "estudio";
+ private const HOST = "localhost";
+ private const DSN = "mysql:host=" . self::HOST . ";dbname=" . self::DB . ";charset=utf8"; 
+ 
+ public function __CONSTRUCT() {
+    try{
+       parent::__CONSTRUCT(self::DSN, self::USER, self::PASS);
+    }catch(PDOException $e){
+       echo 'Ha surgido un error y no se puede conectar a la base de datos. Detalle: ' . $e->getMessage();
+       exit;
+    }
+ }
+    public static function getConexion(){
+
+        return  $obj_conexion = new PDO(self::DSN, self::USER, self::PASS);
+
+    }
 }

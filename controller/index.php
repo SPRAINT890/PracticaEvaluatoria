@@ -8,10 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-    require('../model/conexion.php');
-    ?>
-    <form action="subtotal.php">
+    <form action="guardarPedido.php">
         <label for="cantidad">cantidad</label>
         <input type="number" name="cantidad">
 
