@@ -6,7 +6,7 @@ class DetallePedido{
     private $cantidad;
     private $precioUnitario;
 
-    public function insertDetallePedidio(){
+    public function insertDetallePedido(){
         $sql = 'INSERT INTO detalle_pedido (id_pedido, producto, cantidad, precio_unitario) VALUES (?,?,?,?,?)';
         $con = new Conexion;
         $query = $con->prepare($sql);
