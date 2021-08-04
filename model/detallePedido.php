@@ -7,14 +7,30 @@ class DetallePedido{
     private $precioUnitario;
 
     public function insertDetallePedido(){
-        $sql = 'INSERT INTO detalle_pedido (id_pedido, producto, cantidad, precio_unitario) VALUES (?,?,?,?)';
         $con = new Conexion;
+        $sql = 'INSERT INTO detalle_pedido (id_pedido, producto, cantidad, precio_unitario) VALUES (?,?,?,?)';
         $query = $con->prepare($sql);
 
         $query->execute([
             $this->getIdpedido(), $this->getProducto(), $this->getCantidad(), $this->getPrecioUnitario() 
         ]);
     }
+
+    public function listarDetallePedido($cliente){
+        $con = new Conexion;
+        $sql = 'SELECT p.cliente, d.producto, d.cantidad, d.precio_unitario FROM pedido p, detalle_pedido d WHERE p.id_pedido=d.id_pedido AND p.cliente = "' . $cliente .' "';
+        $consulta = $con->query($sql);
+        if ($consulta->fetchColumn() > 0) {
+            foreach ($consulta as $row) {
+                $data['cliente'] = $row['cliente'];
+    
+            }
+            return $data;
+        }else{
+            return "no hay data";
+        }
+    }
+
     public function getSubTotal(){
         $cantidad = $this->getCantidad();
         $precioUnitario = $this->getPrecioUnitario();

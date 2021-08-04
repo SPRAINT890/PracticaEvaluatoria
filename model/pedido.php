@@ -6,16 +6,30 @@ class Pedido{
     private $idvendedor;
     private $montoTotal;
 
-    //metodos
     public function insertPedido(){
-        $sql = 'INSERT INTO pedido (cliente, fecha, id_vendedor, monto_total) VALUES (?,?,?,?)';
         $con = new Conexion;
+        $sql = 'INSERT INTO pedido (cliente, fecha, id_vendedor, monto_total) VALUES (?,?,?,?)';
         $query = $con->prepare($sql);
         $query->execute([
             $this->getCliente(), $this->getFecha(), $this->getIdvendedor(), $this->getMontoTotal()
         ]);
 
         return $con->lastInsertId();
+    }
+
+    public function listarPedido($cliente){
+        $con = new Conexion;
+        $sql = 'SELECT cliente, fecha, monto_total, id_vendedor FROM pedido WHERE cliente = "' . $cliente . '";';
+        $consulta = $con->query($sql);
+        if ($consulta->fetchColumn() > 0) {
+            foreach ($consulta as $row) {
+                $data['cliente'] = $row['cliente'];
+    
+            }
+            return $data;
+        }else{
+            return "no hay data";
+        }
     }
 
     public function calcularMonto($productoUno){
