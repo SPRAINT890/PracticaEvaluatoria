@@ -21,13 +21,7 @@ class DetallePedido{
         $sql = 'SELECT p.cliente, d.producto, d.cantidad, d.precio_unitario FROM pedido p, detalle_pedido d WHERE p.id_pedido=d.id_pedido AND p.cliente = "' . $cliente .' "';
         $consulta = $con->query($sql);
         if ($consulta->fetchColumn() > 0) {
-            foreach ($consulta as $row) {
-                $data['cliente'] = $row['cliente'];
-    
-            }
-            return $data;
-        }else{
-            return "no hay data";
+            return $consulta;
         }
     }
 

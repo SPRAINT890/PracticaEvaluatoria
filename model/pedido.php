@@ -22,13 +22,7 @@ class Pedido{
         $sql = 'SELECT cliente, fecha, monto_total, id_vendedor FROM pedido WHERE cliente = "' . $cliente . '";';
         $consulta = $con->query($sql);
         if ($consulta->fetchColumn() > 0) {
-            foreach ($consulta as $row) {
-                $data['cliente'] = $row['cliente'];
-    
-            }
-            return $data;
-        }else{
-            return "no hay data";
+            return $consulta;
         }
     }
 
