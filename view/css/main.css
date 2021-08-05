@@ -1,0 +1,36 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.widthImp{
+    width: 4em;
+}
+
+.bg-FirstProduct{
+  background-color: rgb(27, 27, 27);
+}
+
+.bg-SecondProduct{
+  background-color: rgb(16, 41, 75);;
+}
+
+.img{
+  border-radius: 21px 21px 0 0;
+}
+.div__img{
+  width: 80%; height: 300px; border-radius: 21px 21px 0 0;
+}
+
+.text-black{
+  color: black;
+}
