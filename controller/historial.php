@@ -4,6 +4,7 @@ include('../model/pedido.php');
 include('../model/detallePedido.php');
 
 $pedido  = new Pedido;
+$detPedido = new DetallePedido;
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ $pedido  = new Pedido;
   $cliente = "Gaspar Morales";
   $arrayPedido[] = $pedido->listarPedido($cliente);
 
-  $detPedido = new DetallePedido;
+
   $arrayDetPedido[] = $detPedido->listarDetallePedido($cliente);
 
   foreach ($arrayPedido as $row) {
