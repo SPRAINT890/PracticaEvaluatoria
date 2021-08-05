@@ -22,23 +22,18 @@ class Pedido{
         $sql = 'SELECT cliente, fecha, monto_total, id_vendedor FROM pedido WHERE cliente = "' . $cliente . '";';
         $consulta = $con->query($sql);
         if ($consulta->fetchColumn() > 0) {
-            foreach ($consulta as $row) {
-                $data['cliente'] = $row['cliente'];
-    
-            }
-            return $data;
-        }else{
-            return "no hay data";
+            return $consulta;
         }
     }
 
-    public function calcularMonto($productoUno){
-
-        $subtotalUno = $productoUno->getSubTotal();
-        //$subtotalDos = $productoDos->getSubTotal();
-        $montoTotal  = $subtotalUno;
-        $this->setMontoTotal($montoTotal);
-        return $montoTotal;
+    public function calcularMonto($data){
+        $resultado = 0;
+        for ($i=0; $i < count($data) ; $i++) { 
+            $subtotal[$i] = $data[$i]->getSubTotal(); 
+            $resultado += $subtotal[$i];
+        }
+        $this->setMontoTotal($resultado);
+        return $resultado;
     }
 
     public function cantidadVentas($idvendedor){
