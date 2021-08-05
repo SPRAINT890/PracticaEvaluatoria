@@ -32,13 +32,14 @@ class Pedido{
         }
     }
 
-    public function calcularMonto($productoUno){
-
-        $subtotalUno = $productoUno->getSubTotal();
-        //$subtotalDos = $productoDos->getSubTotal();
-        $montoTotal  = $subtotalUno;
-        $this->setMontoTotal($montoTotal);
-        return $montoTotal;
+    public function calcularMonto($data){
+        $resultado = 0;
+        for ($i=0; $i < count($data) ; $i++) { 
+            $subtotal[$i] = $data[$i]->getSubTotal(); 
+            $resultado += $subtotal[$i];
+        }
+        $this->setMontoTotal($resultado);
+        return $resultado;
     }
 
     public function cantidadVentas($idvendedor){

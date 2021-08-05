@@ -20,6 +20,10 @@
   background-color: rgb(27, 27, 27);
 }
 
+.w-s{
+  width: 6em ;
+}
+
 .bg-SecondProduct{
   background-color: rgb(16, 41, 75);;
 }
@@ -33,4 +37,11 @@
 
 .text-black{
   color: black;
+}
+
+.btn-buy-fixed{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1030;
 }
