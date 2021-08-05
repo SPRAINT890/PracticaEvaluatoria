@@ -27,7 +27,8 @@ $detPedido = new DetallePedido;
 
   ?>
   <h1 class="h2 text-center my-5">Historial Pedido</h2>
-  <div class="mx-auto my-3 p-2 bg-lista w-50 rounded shadow-lg">
+  <div class="mx-auto my-3 p-2 bg-lista w-75 rounded shadow-lg">
+    <table class="table">
     <?php
     if (!$arrayPedido) {
       echo "<h2 class='text-center'>No hay data</h2>";
@@ -40,9 +41,10 @@ $detPedido = new DetallePedido;
       }
     }
     ?>
+    </table>
   </div>
   <h1 class="h2 text-center my-5">Historial Detalle Pedido</h2>
-  <div class="mx-auto my-3 p-2 bg-lista w-50 rounded shadow-lg">
+  <div class="mx-auto my-3 p-2 bg-lista w-75 rounded shadow-lg">
     <?php
     if (!$arrayDetPedido) {
       echo "<h2 class='text-center'>No hay data</h2>";
