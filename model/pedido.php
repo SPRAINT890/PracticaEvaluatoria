@@ -19,7 +19,9 @@ class Pedido{
 
     public function listarPedido($cliente){
         $con = new Conexion;
-        $sql = 'SELECT cliente, id_pedido, fecha, monto_total, id_vendedor FROM pedido WHERE cliente = "' . $cliente . '";';
+        $sql = 'SELECT cliente, id_pedido, fecha, monto_total, id_vendedor 
+        FROM pedido  
+        WHERE cliente = "' . $cliente . '" and fecha BETWEEN DATE_SUB(NOW(), INTERVAL 15 DAY) AND NOW();';
         $consulta = $con->query($sql);
         if ($consulta->rowCount() > 0) {
             return $consulta;
