@@ -7,4 +7,3 @@
     <td><?php echo $row['id_vendedor']; ?></td>
   </tr>
 </tbody>
-</table>

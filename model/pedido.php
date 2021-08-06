@@ -23,6 +23,8 @@ class Pedido{
         $consulta = $con->query($sql);
         if ($consulta->fetchColumn() > 0) {
             return $consulta;
+        }else {
+            return "No hay historial";
         }
     }
 
