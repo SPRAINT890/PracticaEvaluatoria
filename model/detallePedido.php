@@ -18,9 +18,9 @@ class DetallePedido{
 
     public function listarDetallePedido($cliente){
         $con = new Conexion;
-        $sql = 'SELECT p.cliente, d.producto, d.cantidad, d.precio_unitario FROM pedido p, detalle_pedido d WHERE p.id_pedido=d.id_pedido AND p.cliente = "' . $cliente .' "';
+        $sql = 'SELECT d.id_pedido, p.cliente, d.producto, d.cantidad, d.precio_unitario FROM pedido p, detalle_pedido d WHERE p.id_pedido=d.id_pedido AND p.cliente = "' . $cliente .' "';
         $consulta = $con->query($sql);
-        if ($consulta->fetchColumn() > 0) {
+        if ($consulta->rowCount() > 0) {
             return $consulta;
         }else {
             return "No hay historial";

@@ -19,13 +19,14 @@ class Pedido{
 
     public function listarPedido($cliente){
         $con = new Conexion;
-        $sql = 'SELECT cliente, fecha, monto_total, id_vendedor FROM pedido WHERE cliente = "' . $cliente . '";';
+        $sql = 'SELECT cliente, id_pedido, fecha, monto_total, id_vendedor FROM pedido WHERE cliente = "' . $cliente . '";';
         $consulta = $con->query($sql);
-        if ($consulta->fetchColumn() > 0) {
+        if ($consulta->rowCount() > 0) {
             return $consulta;
         }else {
             return "No hay historial";
         }
+        
     }
 
     public function calcularMonto($data){

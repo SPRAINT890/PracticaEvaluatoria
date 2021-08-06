@@ -77,9 +77,14 @@ $obj[5] = $productoSeis;
 $monto = $pedido->calcularMonto($obj);
 $idpedido = $pedido->insertPedido();
 
-$productoUno->setIdpedido($idpedido);
 
-$productoUno->insertDetallePedido();
+
+for ($i=0; $i < count($obj) ; $i++) { 
+        if ($obj[$i]->getCantidad() > 0) {
+                $obj[$i]->setIdpedido($idpedido);
+                $obj[$i]->insertDetallePedido();
+        }
+}
 
 echo "<script> alert('guardado correctamente" . '\n' . "su coste total es de: $" . $monto . "');
         location.href = 'index.php';
