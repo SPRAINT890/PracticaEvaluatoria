@@ -79,7 +79,6 @@ $monto = $pedido->calcularMonto($obj);
 $idpedido = $pedido->insertPedido();
 
 
-
 for ($i=0; $i < count($obj) ; $i++) { 
         if ($obj[$i]->getCantidad() > 0) {
                 $obj[$i]->setIdpedido($idpedido);
