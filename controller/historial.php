@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('../model/conexion.php');
 include('../model/pedido.php');
 include('../model/detallePedido.php');
@@ -22,7 +23,7 @@ $detPedido = new DetallePedido;
 <body>
   <?php
   include('../view/navBar.html');
-  $cliente = "Gaspar Morales";
+  $cliente = $_SESSION['CustomerName'];
   $arrayPedido = $pedido->listarPedido($cliente);
 
   $arrayDetPedido = $detPedido->listarDetallePedido($cliente);

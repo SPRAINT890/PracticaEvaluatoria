@@ -1,11 +1,12 @@
 <?php
+session_start();
 include('../model/conexion.php');
 include('../model/pedido.php');
 include('../model/detallePedido.php');
 
 $idvendedor         = '890';
 $fecha              = date("Y-m-d");
-$cliente            = 'Gaspar Morales';
+$cliente            = $_SESSION['CustomerName'];
 
 /*------------------------Pedido------------------------------*/
 $pedido         = new Pedido;
@@ -87,6 +88,6 @@ for ($i=0; $i < count($obj) ; $i++) {
 }
 
 echo "<script> alert('guardado correctamente" . '\n' . "su coste total es de: $" . $monto . "');
-        location.href = 'index.php';
+        location.href = 'tienda.php';
         </script>";
 ?>
